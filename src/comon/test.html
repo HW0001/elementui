@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        我是header
+    </header>
+<nav>
+    我是nav
+</nav>
+<hgroup>
+    我是hgroup
+    <h2>我是hgroup h1</h2>
+    <h2>我是hgroup h2</h2>
+    <h2>我是hgroup h3</h2> 
+</hgroup>
+<footer>
+    <section>
+        cessss
+    </section>
+    我是footer
+</footer>
+<article>
+    <p>内容</p>
+    <aside>
+        <h1>作者简介</h1>
+        <p>小维,哈哈哈</p>
+    </aside>
+</article>
+
+    <script>
+  　var name = "The Window";
+
+　　var object = {
+　　　　name : "My Object",
+
+　　　　getNameFunc : function(){
+　　　　　　var that = this;
+　　　　　　return function(){
+　　　　　　　　return that.name;
+　　　　　　};
+
+　　　　}
+
+　　};
+
+console.log(object.getNameFunc()())
+    </script>
+</body>
+</html>

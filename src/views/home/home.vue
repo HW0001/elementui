@@ -11,10 +11,12 @@
       </el-header>
        <!-- 左边导航及内容区-->
       <el-container>
-        <el-aside>
+        <el-aside  width="220px">
             <left-aside></left-aside>
         </el-aside>
-        <el-main>Main</el-main>
+        <el-main>
+            <router-view></router-view>
+        </el-main>
       </el-container>
     </el-container> 
 </template>
@@ -60,7 +62,7 @@ export default {
     }
    .home-header{
        display: flex;
-       align-items: center;
+       align-items: center;  
    }  
-}
+} 
 </style>
