@@ -7,7 +7,8 @@
               <img src="../../assets/img/header.png" alt="">
               <span>电商后台管理项目</span>
           </div>
-        <el-button type="warning" @click="signout">退出登录</el-button>
+        <el-button type="info" icon="el-icon-close" size="mini" @click="issignout=!issignout">退出登录</el-button>
+        <sign-out  v-if="issignout" :issignout.sync="issignout"></sign-out>
       </el-header>
        <!-- 左边导航及内容区-->
       <el-container>
@@ -23,18 +24,18 @@
 
 <script>
 import LeftAside from './left/Aside'
+import SignOut from "./SignOut"
 export default {
     components:{
-        LeftAside
+        LeftAside,
+        SignOut
     },
   data() {
-    return {};
+    return {
+      issignout:false
+    };
   },
-  methods: {
-    signout() {
-      sessionStorage.removeItem("token");
-      this.$router.replace("/login");
-    },
+  methods: { 
   },
   //生命周期 - 创建完成（访问当前this实例）
   created() {},

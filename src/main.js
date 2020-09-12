@@ -4,10 +4,12 @@ import router from './router'
 import store from './store'
 import "./assets/css/global.css"
 import axios from "axios"
-import 'babel-polyfill'
+import 'babel-polyfill' 
 
 axios.defaults.baseURL="http://timemeetyou.com:8889/api/private/v1/"
+
 axios.defaults.regeneratorRuntime=10000
+
 axios.interceptors.request.use(re=>{
   re.headers.Authorization=window.sessionStorage.getItem('token')
   return re
@@ -15,9 +17,9 @@ axios.interceptors.request.use(re=>{
 
 Vue.prototype.$axios=axios
 
-import ElementUI from 'element-ui' //element-ui的全部组件
-import 'element-ui/lib/theme-chalk/index.css'//element-ui的css
-Vue.use(ElementUI) //使用elementUI
+import element from './plugins/element' //element-ui的部分组件
+import 'element-ui/lib/theme-chalk/index.css'//element-ui的css 
+ 
 
 Vue.config.productionTip = false 
 
