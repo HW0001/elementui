@@ -5,3 +5,7 @@ html,body,#app{
     padding: 0;
     background-color: #fff;
 }
+.el-card{
+    margin-top: 15px; 
+    margin-left: -10px;
+}
