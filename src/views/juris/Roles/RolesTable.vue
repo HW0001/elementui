@@ -2,6 +2,9 @@
 <template>
   <div>
     <el-table :data="roles" border style="width: 100%">
+        <el-table-column type="expand">
+            
+        </el-table-column>
       <el-table-column prop="roleName" label="角色名字"></el-table-column>
       <el-table-column prop="roleDesc" label="角色描述"></el-table-column>
       <el-table-column label="权限等级">
