@@ -66,4 +66,8 @@ export default {
        align-items: center;  
    }  
 } 
+.el-button{
+    background: #4D5F85;
+    height: 30px;
+}
 </style>
